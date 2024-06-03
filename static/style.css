@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+}
+
+@font-face {
+    font-family: 'TitilliumWeb-Regular';
+    src: url("fonts/TitilliumWeb-Regular.woff2");
+}
+
+@font-face {
+    font-family: 'TitilliumWeb-SemiBold';
+    src: url("fonts/TitilliumWeb-SemiBold.woff2");
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.btn-reset {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+body {
+    font-family: 'TitilliumWeb-Regular', sans-serif;
+    color: black;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.header {
+    border-bottom: 1px solid #c4c4c4;
+    margin-bottom: 100px;
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background: #fff;
+    z-index: 10;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+    margin-right: 8px;
+}
+
+.logo-text {
+    padding-top: 7px;
+    font-family: 'TitilliumWeb-SemiBold', sans-serif;
+    font-size: 40px;
+    line-height: 130%;
+    color: #000;
+    margin-right: 120px;
+}
+
+.menu-list {
+    display: flex;
+
+}
+
+
+.menu-item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+
+.menu-link:hover {
+    color: #6a6666;
+    border-bottom: 2px solid #6a6666;
+}
+
+/* Project */
+
+.common-title {
+    margin: 0 0 30px 0;
+    font-size: 50px;
+    line-height: 100%;
+    text-align: center;
+}
+
+.project-blocks {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+.project-block {
+    width: 590px;
+    height: 400px;
+    box-sizing: border-box;
+
+}
+
+.project-block-text {
+     font-size: 22px;
+    background-color: rgba(135, 124, 124, 0.3);
+    backdrop-filter: blur(50px);
+    padding: 30px 50px;
+}
+
+.project-image {
+    width: 590px;
+    height: 400px;
+}
+
+.project {
+    margin-bottom: 150px;
+}
+
+.text {
+    font-size: 18px;
+    margin-bottom: 150px;
+}
+
+.history {
+    margin-bottom: 50px;
+}
+
+.forecasting {
+    margin-bottom: 200px;
+}
+
+
+.button {
+    padding: 5px 10px;
+    border: 2px solid #5c4545;
+    border-radius: 10px;
+    background-color: #5c4545;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    margin-bottom: 20px;
+    margin-right: 8px;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+
+.button:hover {
+    background-color: #fff;
+    color: #5c4545;
+    border-color: #5c4545;
+}
+
+/* .button {
+    background-color: rgba(135, 124, 124, 0.3);
+    border-radius: 60px;
+    box-sizing: border-box;
+    padding: 18px;
+    font-size: 16px;
+    color: #000;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+
+} */
+
+.my {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .label {
+    padding: 15px 30px;
+    border: 2px solid #5c4545;
+    border-radius: 10px;
+    background-color: #5c4545;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.label:hover {
+    background-color: #fff;
+    color: #5c4545;
+    border-color: #5c4545;
+}
+
+.input-number {
+    border: none;
+    border-bottom: 2px solid #5c4545;
+    font-size: 14px;
+    width: 200px;
+    height: 48px;
+    outline: none;
+    margin-right: 8px;
+}
+
+.input-cont {
+    display: flex;
+    align-items: center
+}
+
+
+
+
+
+
+
+.input-file-row {
+	display: inline-block;
+}
+.input-file {
+	position: relative;
+	display: inline-block;
+    margin-right: 10px;
+}
+.input-file span {
+    /* position: relative;
+	display: inline-block; */
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 15px;
+	vertical-align: middle;
+    color: #fff;
+	text-align: center;
+    border-radius: 10px;
+	background-color: #5c4545;
+    border: 2px solid #5c4545;
+	line-height: 22px;
+	height: 40px;
+	padding: 15px 30px;
+	box-sizing: border-box;
+    margin-bottom: 20px;
+	transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+
+/* Hover/Active */
+.input-file:hover span {
+    background-color: #fff;
+    color: #5c4545;
+    border-color: #5c4545;
+}
+.input-file:active span {
+	background-color: #433232;
+}
+
+/* Disabled */
+.input-file input[type=file]:disabled + span {
+	background-color: #eee;
+}
+
+.input-flex {
+    display: flex;
+    max-width: 1370px;
+    align-items: center;
+}
+
+/* Список файлов */
+.input-file-list {
+	padding: 10px 0;
+}
+.input-file-list-item {
+	margin-top: 20px;
+}
+.input-file-list-remove {
+    color: red;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+
+/* таблицы */
+
+
+
+.mb-3 {
+    margin-right: 8px;
+}
+
+
+
+
+
+/* модальное окно*/
+
+/* styles.css */
+.modal {
+  display: none; /* Скрыть модальное окно по умолчанию */
+  position: fixed; /* Оставить модальное окно на одном месте */
+  z-index: 1; /* Показать модальное окно поверх всего остального */
+  left: 0;
+  top: 0 ;
+    width: 80%; /* Ширина на 80% экрана */
+
+
+  overflow: auto; /* Включить прокрутку, если необходимо */
+  background-color: rgb(0,0,0); /* Фон черный цвет */
+  background-color: rgba(0,0,0,0.4); /* Черный с прозрачностью */
+}
+
+/* Модальное содержимое/бокс */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% сверху и по центру */
+  padding: 20px;
+  border: 1px solid #888;
+  width: fit-content !important; /* Ширина на 80% экрана */
+    align-items: center;
+}
+
+/* Кнопка для закрытия модального окна */
+.close-button {
+  color: #aaa;
+  float: left;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+#outputMessage {
+    margin: 20px 0;
+    font-size: 18px;
+    padding-left: 55px;
+}
+
+.author {
+    margin-bottom: 100px;
+}
+
+
+.text-author {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+

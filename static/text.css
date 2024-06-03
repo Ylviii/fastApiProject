@@ -1,0 +1,116 @@
+
+:root {
+  --red: #5c4545;
+  --transitionDuration: 0.2s;
+  --transitionTimingFunction: linear;
+  --time: var(--transitionDuration) var(--transitionTimingFunction);
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container-down {
+  max-width: 1200px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.accordion {
+  --gray: #e7e7e7;
+}
+
+.accordion__item {
+  --backgroundColor: #f7f7f7;
+}
+
+.accordion__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.accordion__header {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray);
+  user-select: none;
+  background-color: var(--backgroundColor);
+}
+
+.accordion__header__title {
+  padding-right: 10px;
+  transition: color var(--time);
+}
+
+.accordion__item.active {
+  height: 152;
+}
+
+.accordion__item.active .accordion__header__title {
+  color: var(--red)
+}
+
+.accordion__header__img {
+  margin-right: 20px;
+  border-right: 1px solid var(--gray);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.accordion__header__img-circle {
+  border: 1px solid #505050;
+  padding: 10px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--time);
+}
+
+.accordion__item.active .accordion__header__img-circle {
+  border-color: var(--red);
+}
+
+.accordion__header__img-circle::before,
+.accordion__header__img-circle::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60%;
+  height: 2px;
+  background-color: #505050;
+  transition: background-color var(--time), transform var(--time);
+}
+
+.accordion__item.active .accordion__header__img-circle::before,
+.accordion__item.active .accordion__header__img-circle::after {
+  background-color: var(--red);
+}
+
+.accordion__item.active .accordion__header__img-circle::before {
+  transform: rotate(0deg);
+}
+
+.accordion__header__img-circle::before {
+  transform: rotate(90deg);
+}
+
+.accordion__text {
+  border: 1px solid var(--gray);
+  border-top: none;
+  padding: 12px;
+  word-spacing: 5px;
+  line-height: 150%;
+  font-size: 15px;
+  text-indent: 20px;
+}
+
+.accordion__text__wrapper {
+  overflow: hidden;
+  height: 0px;
+  background-color: var(--backgroundColor);
+  transition: height var(--time);
+}

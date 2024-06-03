@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Построение графика по загруженному файлу</title>
+    <link rel="stylesheet" href="static/text.css">
+    <link rel="stylesheet" href="static/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="icon" href="static/images/oil-can-solid-svgrepo-com.svg">
+</head>
+<body>
+  <header class="header">
+  <div class="container">
+      <div class="header-container">
+          <div class="logo">
+              <img src="static/images/oil-can-solid-svgrepo-com.svg" alt="logo" class="logo-img">
+              <p class="logo-text">OilTime</p>
+          </div>
+          <nav class="menu">
+              <ul class="menu-list list-reset">
+                  <li class="menu-item"><a href="#project" class="menu-link">О проекте</a></li>
+                  <li class="menu-item"><a href="#history" class="menu-link">Справочная информация</a></li>
+                  <li class="menu-item"><a href="#forecasting" class="menu-link">Прогнозирование</a></li>
+                  <li class="menu-item"><a href="#author" class="menu-link">Авторы</a></li>
+
+              </ul>
+          </nav>
+      </div>
+  </div>
+</header>
+
+<main class="main">
+  <section class="project" id="project">
+      <div class="common-title">О проекте</div>
+      <div class="container">
+
+          <div class="project-blocks">
+              <div class="project-block project-block-text">Наш проект нацелен на анализ цен на нефть и применение прогнозирования
+                  для принятия обоснованных решений на рынке нестабильного и сложного энергетического рынка.
+                  Он информирует заинтересованные стороны с ценообразованием, помогает снизить риски и
+                  движет лучшим принятием решений. Заинтересованными сторонами могут быть:
+                  Производители нефти, Потребители, Акционеры, Биржи, Правительство стран.
+
+              </div>
+              <div class="project-block project-block-img"><img src="static/images/scale_1200.jpg" alt="project-image"
+                      class="project-image"></div>
+          </div>
+      </div>
+  </section>
+
+
+  <section class="history" id="history">
+      <div class="common-title">Справочная информация</div>
+       <div class="container-down">
+        <div class="accordion">
+
+          <div class="accordion__item active">
+
+            <div class="accordion__header">
+              <div class="accordion__header__img">
+                <div class="accordion__header__img-circle">
+
+                </div>
+              </div>
+              <div class="accordion__header__title">Временной ряд</div>
+            </div>
+            <div class="accordion__text__wrapper">
+              <div class="accordion__text">
+                Временной ряд — это собранный в разные моменты времени статистический материал о значении каких-либо параметров (в
+                простейшем случае одного) исследуемого процесса.
+                Каждая единица статистического материала называется измерением или отсчётом. Также допустимо называть его уровнем на
+                указанный с ним момент времени. Во временном ряде для каждого отсчёта должно быть указано время измерения или номер
+                измерения по порядку.
+                Временной ряд существенно отличается от простой выборки данных, так как при анализе учитывается взаимосвязь измерений со
+                временем, а не только статистическое разнообразие и статистические характеристики выборки.
+                <p>В связи с растущей неопределенностью внешней среды, увеличением рыночной конкуренции возникает необходимость в наиболее
+                    качественном принятии управленческих решений в области стратегического и тактического планирования. Также, ввиду
+                    наибольшего
+                    распространения интегрированного планирования на предприятиях и в цепях поставок, растет важность составляющей
+                    прогнозирования в системе планирования.</p>
+               <p> К сожалению, применение отдельных методов прогнозирования
+                не приводит к оптимальному и достаточно точному результату, поскольку прогнозы могут учитывать не только факторы,
+                оказывающее
+                влияние на предмет прогнозирования, но и различные составляющие
+                прогноза, такие как его основная тенденция развития, сезонная и циклические составляющие, случайная компонента.
+                </p>
+                <p>Одним из методов, учитывающим несколько составляющих прогноза, является метод Хольта-Винтерса. Метод Хольта-Винтерса –
+                    это трехпараметрическая модель прогноза, которая учитывает: <br>
+                    – сглаженный экспоненциальный ряд;<br>
+                    – тренд;<br>
+                    – сезонность.</p>
+              </div>
+
+            </div>
+
+          </div>
+          <!-- .accordion__item -->
+
+          <div class="accordion__item">
+
+            <div class="accordion__header">
+              <div class="accordion__header__img">
+                <div class="accordion__header__img-circle">
+
+                </div>
+              </div>
+              <div class="accordion__header__title">Экспоненциальное сглаживание</div>
+            </div>
+            <div class="accordion__text__wrapper">
+              <div class="accordion__text">
+                Экспоненциальное сглаживание - это метод поиска закономерностей во временных рядах, который может быть использован для
+                составления прогнозов. В своей простой форме экспоненциальное сглаживание представляет собой взвешенное скользящее
+                среднее:
+                каждое сглаженное значение представляет собой средневзвешенное значение всех прошлых значений временного ряда (с весами,
+                экспоненциально уменьшающимися от самых последних к самым старым значениям). В более сложных формах экспоненциальное
+                сглаживание применяется к временному ряду рекурсивно, чтобы учесть тенденцию и сезонность. В этом случае говорят, что
+                модель
+                состоит из трех компонентов – ошибки, тренда и сезонности, из которых выводится другое обозначение для экспоненциального
+                сглаживания (“ETS”).
+              </div>
+            </div>
+
+          </div>
+          <!-- .accordion__item -->
+
+          <div class="accordion__item">
+
+            <div class="accordion__header">
+              <div class="accordion__header__img">
+                <div class="accordion__header__img-circle">
+
+                </div>
+              </div>
+              <div class="accordion__header__title">Метод Хольта</div>
+            </div>
+            <div class="accordion__text__wrapper">
+              <div class="accordion__text">
+                Как рассчитать прогноз по методу Хольта:
+                Рассчитываем экспоненциально-сглаженный ряд;
+                Определяем значение тренда;
+                Делаем прогноз. <br>
+                Рассмотрим подробнее:
+                <p>
+
+                    1. Рассчитываем экспоненциально-сглаженный ряд:
+                    Lt=k*Yt+(1-k)*(Lt-1-Tt-1), где
+
+                    Lt – сглаженная величина на текущий период;
+                    k – коэффициент сглаживания ряда;
+                    Yt – текущие значение ряда (например, объём продаж);
+                    Lt-1 – сглаженная величина за предыдущий период;
+                    Tt-1 – значение тренда за предыдущий период;
+                    Lt (Сглаженная величина текущий период) = k(коэффициент сглаживания ряда)* Yt(текущие значение ряда (например, объём
+                    продаж))+(1-коэффициент сглаживания ряда)*( Lt-1(сглаженная величина за предыдущий период) -Tt-1(тренд за предыдущий
+                    период)
+
+                    Коэффициент сглаживания ряда k задается вами в ручную и находится в диапазоне от 0 до 1.
+
+                    Для первого периода в начале данных экспоненциально-сглаженный ряд равен первому значению ряда (например, объему продаж
+                    за первый месяц) L1=Y1;</p>
+
+                <p>
+                    2. Определяем значение тренда
+                Tt=b*(Lt - Lt-1)+(1-b)*Tt-1, где:
+
+                Tt – значение тренда на текущий период;
+                b – коэффициент сглаживания тренда;
+                Lt – экспоненциально сглаженная величина за текущий период;
+                Lt-1 – экспоненциально сглаженная величина за предыдущий период;
+                Tt-1 – значение тренда за предыдущий период.
+                Tt(значение тренда на текущий период)=b(коэффициент сглаживания тренда)*(Lt (экспоненциально сглаженная величина за
+                текущий период)- Lt-1(экспоненциально сглаженная величина за предыдущий период))+(1-b(коэффициент сглаживания
+                тренда))*Tt-1 (значение тренда за предыдущий период)
+
+                Коэффициент сглаживания тренда b задается вами в ручную и находится в диапазоне от 0 до 1.
+
+                Значение тренда для первого периода равно 0 (T1 =0);
+                </p>
+
+               <p>
+                3. Делаем прогноз по методу Хольта
+                Прогноз на p периодов вперед равен:
+
+                Ŷt+p = Lt + p *Tt, где
+
+                Ŷt+p – прогноз по методу Хольта на p период;
+                Lt – экспоненциально сглаженная величина за последний период;
+                p – порядковый номер периода, на который делаем прогноз;
+                Tt – тренд за последний период.
+                Ŷt+p (Прогноз по методу Хольта)= Lt (экспоненциально сглаженная величина за последний период)+ p (количество периодов
+                вперед, на которое делаем прогноз) *Tt (тренд за последний период)
+               </p>
+              </div>
+            </div>
+
+          </div>
+          <!-- .accordion__item -->
+
+        </div>
+      </div>
+  </section>
+
+   <section class="forecasting" id="forecasting">
+       <div class="common-title">Прогнозирование</div>
+            <div class="container input-flex">
+                        <div class="mb-3">
+                      <input class="form-control" type="file" name="file[]" id="fileInput" multiple onchange="checkFile(this)" multiple onchange="tablewisionPRO()">
+                        </div>
+                        <button id="gaga" class="button" onclick="alertModal(this)">Загрузить данные датафрейма</button>
+                        <!--Модальное окно-->
+                            <div id="modal" class="modal">
+                                <div class="modal-content">
+                                    <span class="text" style="margin-bottom: 10px; text-align: center">Данные датафрейма</span>
+                                    <div id="scrollbar-container" style="height: 300px; overflow: scroll; width: 300px; margin-bottom: 10px; border: 2px solid gray; align-items: center">
+                                      <table id="dataframe-container2" style="text-align: center;  margin: 0 auto;">
+                                      </table>
+                                    </div>
+                                    <button class="close-button button" style="margin-bottom: 0;">Закрыть</button>
+                                </div>
+                            </div>
+
+                        <!---->
+                        <button id="button-down" class="button" onclick="processFile()">Обработать файл и построить график</button>
+                        <button class="button" id="buttom-down" onclick="Faa()">Прогнозирование графика</button>
+                        <input type="number" id="numericInput" class="input-number" placeholder="мин. 1" max="10" min="0">
+
+                        <button id="downloadButton" class="button" onclick="Download()">Загрузить отчет</button>
+            </div>
+
+                <div class="container " style="display: flex; gap: 20px">
+                     <div id="dataframe-container1"></div>
+                     <div id="dataframe-container"></div>
+
+                </div>
+                <div class="container">
+                    <div id="plotly-chart" class="plotly-chart"></div>
+                    <div id="outputMessage"></div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="author" id="author">
+            <div class="common-title">Авторы</div>
+            <div class="container">
+                 <div class="text-author">Никулин Дмитрий - Руководитель проекта, главный разработчик Back-End, технический писатель, ответственный за Fullstack разработку.</div>
+                <div class="text-author">Чикалев Илья - Главный математико-аналитический инженер, технический писатель, ответственный за расчеты прогнозирования.</div>
+                <div class="text-author">Таланов Дмитрий - Главный разработчик Front-End, главный Дизайнер, технический писатель, ответственный за Front-систему проекта.</div>
+            </div>
+        </section>
+</main>
+
+
+  <script>
+ async function alertModal() {
+
+      const fileInput = document.getElementById('fileInput');
+      const file = fileInput.files[0];
+
+        if (!file) {
+    alert('Ошибка: файл не выбран! ');
+    return;
+  }
+ }
+    async function processFile() {
+
+      const fileInput = document.getElementById('fileInput');
+      const file = fileInput.files[0];
+
+        if (!file) {
+    alert('Ошибка: Пожалуйста, выберете файл формата cvs или excel.');
+    return;
+  }
+
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const response = await fetch('/file/upload-file', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await response.json();
+      Plotly.newPlot('plotly-chart', JSON.parse(data), {}, {responsive: true});
+    }
+    async function Faa() {
+  const fileInput = document.getElementById('fileInput');
+  const file = fileInput.files[0];
+  const numericInput = document.getElementById('numericInput').value;
+
+  // Проверяем условие, если numericInput меньше 1, показываем ошибку
+  if (numericInput < 1) {
+    alert('Ошибка: введите значение, меньше или равное 1');
+    return; // Прерываем выполнение функции
+  }
+
+  const formData = new FormData();
+  formData.append('file', file);
+  formData.append('numericInput', numericInput);
+
+  const response = await fetch('/file/analiz-file', {
+    method: 'POST',
+    body: formData
+  });
+
+  const data = await response.json();
+  Plotly.newPlot('plotly-chart', JSON.parse(data.figi_json), {}, {responsive: true});
+
+ if (data.sum_of_comparisons < 0) {
+    const message = "Вывод: по результатам нашего пронозирования, мы сделали вывод, что график снижается, из-за экономических, а также политических факторов.";
+    document.getElementById("outputMessage").innerText = message;
+} else if (data.sum_of_comparisons > 0) {
+    const message = "Вывод: по результатам нашего пронозирования, мы сделали вывод, что график будет расти вверх, из-за экономических, а также политических факторов.";
+    document.getElementById("outputMessage").innerText = message;
+} else {
+    const message = "Вывод: по результатам нашего пронозирования, мы сделали вывод, что график будет придерживаться стабильности в ближайшей перспективе.";
+    document.getElementById("outputMessage").innerText = message;
+}
+console.log("Сумма результатов:", data.sum_of_comparisons);
+  console.log("Сумма результатов:", data.sum_of_comparisons);
+}
+
+    async function checkFile(input) {
+        const file = input.files[0];
+
+        // Проверяем тип файла
+        if (!file.type.match('text/csv') && !file.name.endsWith('.csv') &&
+            !file.type.match('application/vnd.ms-excel') && !file.name.endsWith('.xls') &&
+            !file.name.endsWith('.xlsx')) {
+            alert('Ошибка: Формат файла не поддерживается. Пожалуйста, выберите файл в формате CSV или Excel.');
+            input.value = ''; // Очищаем значение input, чтобы пользователь мог выбрать другой файл
+        }
+    }
+
+
+async function Download() {
+    const options = {
+        title: "Сохранить как",
+        suggestedName: "Отчёт",
+        types: [
+                     {
+                description: "Документ Word",
+                accept: { "application/vnd.openxmlformats-officedocument.wordprocessingml.document": [".docx"] },
+            },
+            {
+                description: "Файл Excel",
+                accept: { "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": [".xlsx"] },
+            },
+            {
+                description: "PDF документ",
+                accept: { "application/pdf": [".pdf"] },
+            }
+        ]
+    };
+
+    const fileHandle = await window.showSaveFilePicker(options);
+
+    const extension = fileHandle.name.split('.').pop();
+    let fileFormat;
+
+    if (extension === 'docx') {
+        fileFormat = 'word';
+    } else if (extension === 'xlsx') {
+        fileFormat = 'excel';
+    } else if (extension === 'pdf') {
+    fileFormat = 'pdf';
+    } else {
+        console.error('Unsupported file format');
+        return;
+    }
+
+    fetch(`/file/download/${fileFormat}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.blob();
+        })
+        .then(async blob => {
+            const writable = await fileHandle.createWritable();
+            await writable.write(blob);
+            await writable.close();
+        })
+        .catch(error => console.error('Error downloading the file:', error));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // для кнопки
+
+
+
+const processButton = document.getElementById('gaga');
+
+processButton.addEventListener('click', () => {
+  tableall();
+});
+        async function tableall() {
+  const fileInput = document.getElementById('fileInput');
+  const file = fileInput.files[0];
+
+  const formData = new FormData();
+  formData.append('file', file);
+
+  const response = await fetch('/file/daas', {
+    method: 'POST',
+    body: formData
+  });
+
+  const htmlTable = await response.json();
+  const dataframeContainer = document.getElementById('dataframe-container2');
+  dataframeContainer.innerHTML = htmlTable;
+}
+</script>
+    <script src="static/jquery-3.7.1.js"></script>
+    <script src="static/main1.js"></script>
+  <script src="static/text.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+</html>
